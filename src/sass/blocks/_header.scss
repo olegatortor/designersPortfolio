@@ -1,0 +1,19 @@
+.header {
+    margin-top: 40px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__link {
+        font-size: 24px;
+        color: #000;
+        margin-right: 75px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

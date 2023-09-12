@@ -1,0 +1,19 @@
+.about {
+    font-family: 'Montserrat';
+    font-size: 24px;
+
+    &__wrapper {
+        position: relative;
+        text-align: right;
+    }
+
+    &__descr {
+        margin-left: 500px;
+    }
+
+    &__cat {
+        position: absolute;
+        left: 0;
+        top: -70px;
+    }
+}
