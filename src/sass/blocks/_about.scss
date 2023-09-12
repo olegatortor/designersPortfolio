@@ -2,18 +2,67 @@
     font-family: 'Montserrat';
     font-size: 24px;
 
+
     &__wrapper {
         position: relative;
         text-align: right;
     }
-
     &__descr {
         margin-left: 500px;
     }
-
     &__cat {
         position: absolute;
         left: 0;
         top: -70px;
+    }
+
+
+    &__education {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+    }
+    .education {
+        &__before {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 1px;
+                background-color: #000;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        &__ul {
+            position: relative;
+            padding-top: 40px;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: calc(100% + 4px);
+                top: -19px;
+                background-color: #000;
+            }
+        }
+        &__li {
+            margin-top: 20px;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &__text {
+            padding-left: 35px;
+        }
+    }
+
+
+    &__skills {
+        
+    }
+    .skills {
+        
     }
 }

@@ -7,6 +7,9 @@
     a {
         text-decoration: none;
     }
+    li {
+        list-style: none;
+    }
 }
 
 .container {
@@ -40,6 +43,15 @@
     font-family: Montserrat Alternates;
     font-size: 42px;
     font-weight: 700;
+    &__mini {
+        font-family: Montserrat Alternates;
+        text-transform: uppercase;
+        font-size: 32px;
+        padding-top: 50px;
+        &_pt0 {
+            padding-top: 0;
+        }
+    }
 }
 
 
