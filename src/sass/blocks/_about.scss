@@ -27,7 +27,6 @@
     .education {
         &__column {
             width: 780px;
-            
         }
     }
 
@@ -56,7 +55,7 @@
                 content: '';
                 position: absolute;
                 width: 1px;
-                height: calc(100% + 4px);
+                height: calc(100% + 3%);
                 top: -19px;
                 background-color: #000;
             }
