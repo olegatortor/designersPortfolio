@@ -1,0 +1,23 @@
+.footer {
+    font-family: 'Montserrat Alternates';
+    margin: 120px 0 20px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        color: #000;
+        font-size: 24px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        margin-right: 8px;
+    }
+}

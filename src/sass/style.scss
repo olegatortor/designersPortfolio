@@ -26,14 +26,21 @@
         border: 4px solid #FFD500;
         border-radius: 100%;
         padding: 17px;
-        margin-right: 60px;
+        margin-right: 40px;
         &:last-child {
             margin-right: 0;
         }
+        &__mini {
+            margin-right: 15px;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
     img {
-        width: 34px;
-        height: 34px;
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -62,3 +69,4 @@
 @import 'blocks/promo';
 @import 'blocks/about';
 @import 'blocks/works';
+@import 'blocks/footer';

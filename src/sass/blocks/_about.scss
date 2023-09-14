@@ -22,7 +22,15 @@
         margin-top: 50px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
+    .education {
+        &__column {
+            width: 780px;
+            
+        }
+    }
+
     .list {
         &__before {
             position: relative;
