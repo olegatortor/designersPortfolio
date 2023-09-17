@@ -8,7 +8,7 @@
         text-align: right;
     }
     &__descr {
-        width: 850px;
+        width: 720px;
         margin-left: auto;
     }
     &__cat {
@@ -51,19 +51,25 @@
         &__ul {
             position: relative;
             padding-top: 40px;
+        }
+        &__li {
+            margin-top: 20px;
+            position: relative;
             &::after {
                 content: '';
                 position: absolute;
                 width: 1px;
-                height: calc(100% + 3%);
-                top: -19px;
+                height: calc(100% + 20px);
+                top: -58px;
                 background-color: #000;
             }
-        }
-        &__li {
-            margin-top: 20px;
             &:first-child {
                 margin-top: 0;
+            }
+            &:last-child {
+                &::after {
+                    height: calc(200% + 15px);
+                }
             }
         }
         &__text {
@@ -109,6 +115,5 @@
     &__experience {
         margin-left: auto;
         text-align: right;
-        width: 950px;
     }
 }

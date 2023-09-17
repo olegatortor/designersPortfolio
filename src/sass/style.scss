@@ -14,7 +14,7 @@
 }
 
 .container {
-    width: 1340px;
+    width: 1140px;
     margin: 0 auto;
 }
 
@@ -71,6 +71,7 @@
 @import 'blocks/about';
 @import 'blocks/works';
 @import 'blocks/footer';
+@import 'blocks/menu';
 
 
 @import 'base/media';

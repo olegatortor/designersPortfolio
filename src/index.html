@@ -8,6 +8,28 @@
     <title>Привіт, мене звуть Ірина</title>
 </head>
 <body>
+    <div class="menu">
+        <div class="menu__block">
+            <div class="close">
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul class="menu__list">
+                    <li><a href="#" class="menu__link">Про мене</a></li>
+                    <li><a href="#" class="menu__link">Мої роботи</a></li>
+                    <li><a href="#" class="menu__link">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu__overlay">
+        </div>
+    </div>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <header class="header">
         <div class="header__container">
             <a href="#" class="header__link">Про мене</a>
@@ -153,13 +175,16 @@
 
             <h3 class="subtitle__mini">Лендінги</h3>
             <div class="works__slider">
-                <div class="arr arr_left"><img src="icons/arrleft.svg" alt="Стрілка вліво"></div>
+                <div class="arr arr_left arr_hide"><img src="icons/arrleft.svg" alt="Стрілка вліво"></div>
                 <div class="slider__container">
                     <img src="img/sites/pets.jpg" alt="pets">
                 </div>
+                <div class="arr arr_right arr_hide"><img src="icons/arrright.svg" alt="Стрілка вправо"></div>
+            </div>
+            <div class="arr__wrapper">
+                <div class="arr arr_left"><img src="icons/arrleft.svg" alt="Стрілка вліво"></div>
                 <div class="arr arr_right"><img src="icons/arrright.svg" alt="Стрілка вправо"></div>
             </div>
-
             
             <h3 class="subtitle__mini subtitle__mini_right">Створення моделей одягу</h3>
             <div class="works__model"><img src="img/models.jpg" alt="Моделі одягу" class="works__img"></div>
@@ -210,7 +235,7 @@
                     <img src="icons/gmail.svg" alt="Пошта" class="footer__icon">
                     <a href="#" class="footer__text">udodikira@gmail.com</a>
                 </div>
-                <div class="icons">
+                <div class="footer__item icons icons__mini ">
                     <a href="#" class="icon icon__mini"><img src="icons/telegram.svg" alt="telegram"></a>
                     <a href="#" class="icon icon__mini"><img src="icons/instagram.svg" alt="instagram"></a>
                     <a href="#" class="icon icon__mini"><img src="icons/behance.svg" alt="behance" ></a>
@@ -222,6 +247,18 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <script>
+        const hamburger = document.querySelector('.hamburger'),
+      menu = document.querySelector('.menu'),
+      close = document.querySelector('.close');
+
+        hamburger.addEventListener('click' , () => {
+            menu.classList.add('active');
+        });
+
+        close.addEventListener('click' , () => {
+            menu.classList.remove('active');
+        });
+
         let percentageInput = 80;
 
         let ctx = document.querySelectorAll('.myChart');
