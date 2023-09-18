@@ -27,6 +27,11 @@
     .education {
         &__column {
             width: 780px;
+            opacity: 0;
+            transform: translateX(-80%);
+        }
+        &__certs {
+            transform: translateX(-80%);
         }
     }
 
