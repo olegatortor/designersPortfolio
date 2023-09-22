@@ -10,9 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.classList.remove('active');
     });
 
-
-
-
     function isElementInViewport(el) {
         let rect = el.getBoundingClientRect();
         return (
@@ -169,4 +166,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener("scroll", animСertificates);
     window.addEventListener("scroll", animExperiences);
+
+
+
+
+    const sliderItems = document.querySelectorAll(".slider__item"),
+          arrLeft = document.querySelectorAll('.arr_left'),
+          arrRight = document.querySelectorAll('.arr_right');
+    let sliderNum = 0;
+    
+    slider(sliderNum)
+    function slider(n) {
+        console.log(n);
+        if(n >= sliderItems.length - 1) {
+            sliderNum = 0;
+        }
+        if(n == -1) {
+            sliderNum += sliderItems.length - 1;
+        }
+        sliderItems.forEach(elem => elem.style.display = 'none');
+
+        sliderItems[sliderNum].style.display = 'block';
+    }
+
+    function changeSlide(arr, curr) {
+        arr.forEach(i => {
+            i.addEventListener('click', () => slider(sliderNum += curr));
+        })
+    }
+    changeSlide(arrLeft, -1);
+    changeSlide(arrRight, 1);
+    
 })

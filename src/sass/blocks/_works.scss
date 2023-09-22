@@ -7,8 +7,21 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        .arr {
+            img {
+                cursor: pointer;
+            }
+        }
         img {
             width: 100%;
+        }
+    }
+    .slider {
+        &__container {
+            display: flex;
+        }
+        &__item {
+            width: 700px;
         }
     }
     .arr__wrapper {
@@ -17,10 +30,8 @@
         display: none;
         justify-content: space-between;
         align-items: center;
-        .arr {
-            img {
-                width: 50px;
-            }
+        img {
+            width: 50px;
         }
     }
     &__model {
