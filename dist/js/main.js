@@ -172,29 +172,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const sliderItems = document.querySelectorAll(".slider__item"),
           arrLeft = document.querySelectorAll('.arr_left'),
-          arrRight = document.querySelectorAll('.arr_right');
-    let sliderNum = 0;
-    
-    slider(sliderNum)
-    function slider(n) {
-        console.log(n);
-        if(n >= sliderItems.length - 1) {
-            sliderNum = 0;
-        }
-        if(n == -1) {
-            sliderNum += sliderItems.length - 1;
-        }
-        sliderItems.forEach(elem => elem.style.display = 'none');
+          arrRight = document.querySelectorAll('.arr_right'),
+          sliderWrapper = document.querySelector('.slider__wrapper'),
+          sliderContainer = document.querySelector('.slider__container'),
+          sliderWidth = window.getComputedStyle(sliderWrapper).width;
 
-        sliderItems[sliderNum].style.display = 'block';
+    let offset = 0;
+    
+    sliderContainer.style.width = 100 * sliderItems.length + '%';
+
+    sliderItems.forEach(el => {
+        el.style.width = sliderWidth;
+    });
+
+    function slider(n) {
+        const width = +sliderWidth.slice(0, sliderWidth.length - 2); 
+        
+        switch (n) {
+            case '+':
+                offset += width;
+                if (offset > width * (sliderItems.length - 1)) {
+                    offset = 0;
+                }
+                break;
+            case '-':
+                offset -= width;
+                if (offset < 0) {
+                    offset = width * (sliderItems.length - 1);
+                }
+                break;
+        }
+
+        sliderContainer.style.transform = `translateX(-${offset}px)`;
     }
 
     function changeSlide(arr, curr) {
         arr.forEach(i => {
-            i.addEventListener('click', () => slider(sliderNum += curr));
+            i.addEventListener('click', () => slider(curr));
         })
     }
-    changeSlide(arrLeft, -1);
-    changeSlide(arrRight, 1);
+
+    changeSlide(arrLeft, '-');
+    changeSlide(arrRight, '+');
     
 })

@@ -17,8 +17,13 @@
         }
     }
     .slider {
+        &__wrapper {
+            overflow: hidden;
+            width: 900px;
+        }
         &__container {
             display: flex;
+            transition: all .5s;
         }
         &__item {
             width: 700px;
