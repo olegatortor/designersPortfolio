@@ -384,4 +384,47 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', animateMokap(i, translateMokap));
     })
 
+
+
+
+
+
+    function createList() {
+        class List {
+            constructor (text, parentSelector, side, sideText) {
+                this.text = text;
+                this.parent = document.querySelector(parentSelector);
+                this.side = side;
+                this.sideText = sideText;
+            }
+    
+            render() {
+                const element = document.createElement('li');
+                element.classList.add('list__li');
+    
+                element.innerHTML = `
+                    <div class="list__item list__before ${this.side}">
+                        <div class="list__text ${this.sideText}">${this.text}</div>
+                    </div>
+                `;
+                this.parent.append(element);
+            }
+        }
+    
+        fetch('../data/bd-text.json')
+            .then(response => response.json()) 
+            .then(data => {
+                data.education.forEach(({ text }) => {
+                    new List(text, '.list__ul-edu', '', '').render();
+                });
+                data.experience.forEach(({ text }) => {
+                     new List(text, '.list__ul-exp', 'list__before_right', 'list__text_right').render();
+                });
+            })
+            .catch(error => {
+                console.error('Помилка завантаження файлу JSON:', error);
+            });
+    }
+    createList()
+
 })
