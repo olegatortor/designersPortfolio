@@ -8,7 +8,6 @@
 
     .icons {
         .icon {
-            border: 4px solid #FFD500;
             padding: 10px;
             margin-right: 20px;
             &__mini {
@@ -31,9 +30,9 @@
         font-size: 32px;
         &__mini {
             font-size: 24px;
-            margin-top: 50px;
+            padding-top: 50px;
             &_pt0 {
-                margin-top: 0;
+                padding-top: 0;
             }
         }
     }
@@ -135,6 +134,7 @@
         }
         &__model {
             padding: 30px 0 10px 0;
+            height: auto;
         }
         .click {
             font-size: 22px;
@@ -142,6 +142,10 @@
         .mokaps__wrapper {
             margin-top: 30px;
             width: 600px;
+        }  
+        .advertising__container{
+            grid-template-columns: 300px 140px 140px 250px;
+            grid-template-rows: 250px 180px;
         }
         &__mokap {
             width: 280px;
@@ -164,7 +168,6 @@
 
     .icons {
         .icon {
-            border: 2px solid #FFD500;
             &__mini {
                 border: 2px solid #FFD500;
                 margin-right: 10px;
@@ -185,9 +188,9 @@
         font-size: 28px;
         &__mini {
             font-size: 24px;
-            margin-top: 30px;
+            padding-top: 30px;
             &_pt0 {
-                margin-top: 0;
+                padding-top: 0;
             }
         }
     }
@@ -266,6 +269,26 @@
         }
         .click {
             font-size: 18px;
+        }
+        .advertising__container{
+            grid-template-columns: 220px 140px 180px;
+            grid-template-rows: 120px 220px 230px;
+        }
+        .box1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .box2 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        .box5 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 3;
         }
     }
 
@@ -364,7 +387,7 @@
 
     .works {
         .advertising__container{
-            grid-template-columns: 1fr;
+            grid-template-rows: auto;
         }
         .centered-text {
             font-size: 28px;
@@ -400,9 +423,9 @@
         font-size: 22px;
         &__mini {
             font-size: 16px;
-            margin-top: 30px;
+            padding-top: 30px;
             &_pt0 {
-                margin-top: 0;
+                padding-top: 0;
             }
         }
     }
@@ -502,13 +525,7 @@
         }
         .list {
             &__column {
-                width: 100%;
-            }
-            &__ul {
-                padding-top: 25px;
-            }
-            &__li {
-                margin-top: 10px;
+                width: 95%;
             }
             &__p {
                 font-size: 12px;
@@ -555,6 +572,9 @@
             
         }
         
+        .advertising__container{
+            grid-template-columns: auto;
+        }
         .box1 {
             grid-column-start: 1;
             grid-column-end: 2;

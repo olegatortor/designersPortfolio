@@ -16,9 +16,9 @@
             </div>
             <nav>
                 <ul class="menu__list">
-                    <li><a href="#" class="menu__link">Про мене</a></li>
-                    <li><a href="#" class="menu__link">Мої роботи</a></li>
-                    <li><a href="#" class="menu__link">Контакти</a></li>
+                    <li><a href="#about" class="menu__link">Про мене</a></li>
+                    <li><a href="#works" class="menu__link">Мої роботи</a></li>
+                    <li><a href="#contacts" class="menu__link">Контакти</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,9 +32,9 @@
     </div>
     <header class="header">
         <div class="header__container">
-            <a href="#" class="header__link">Про мене</a>
-            <a href="#" class="header__link">Мої роботи</a>
-            <a href="#" class="header__link">Контакти</a>
+            <a href="#about" class="header__link">Про мене</a>
+            <a href="#works" class="header__link">Мої роботи</a>
+            <a href="#contacts" class="header__link">Контакти</a>
         </div>
     </header>
 
@@ -59,7 +59,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about__wrapper">
                 <h2 class="subtitle">ПРо мене</h2>
@@ -71,10 +71,12 @@
 
             <div class="about__education">
                 <div class="education__column list__column">
-                    <div class="list__item list__before">
-                        <h3 class="subtitle__mini list__text subtitle__mini_pt0">Освіта</h3>
-                    </div>
                     <ul class="list__ul">
+                        <li class="list__li">
+                            <div class="list__item list__before">
+                                <h3 class="subtitle__mini subtitle__mini_pt0 list__text subtitle__mini_pt0">Освіта</h3>
+                            </div>
+                        </li>
                         <li class="list__li">
                             <div class="list__item list__before">
                                 <div class="list__text list__p">Рівненський економіко-технологічний фаховий коледж </div>
@@ -91,6 +93,7 @@
                             </div>
                         </li>
                     </ul>
+                    
                 </div>
                 <div class="education__certs">
                     <div class="education__cert"><img src="img/sert1.jpg" alt="Сертифікат 1"></div>
@@ -147,31 +150,51 @@
                 </div>
             </div>
 
-            <div class="about__experience">
-                <div class="list__column list__column_right">
-                    <div class="list__item list__before list__before_right">
-                        <h3 class="subtitle__mini list__text list__text_right">досвід роботи</h3>
+            <div class="experience__wrapper">
+                <div class="about__experience">
+                    <div class="list__column list__column_right">
+                        <ul class="list__ul">
+                            <li class="list__li">
+                                <div class="list__item list__before list__before_right">
+                                    <h3 class="subtitle__mini subtitle__mini_pt0 list__text list__text_right">досвід роботи</h3>
+                                </div>
+                            </li>
+                            <li class="list__li">
+                                <div class="list__item list__before list__before_right">
+                                    <div class="list__text list__text_right">Викладач графічного дизайну  онлайн в школі програмування для дітей Logika з 01.03.23 по сьогодні</div>
+                                </div>
+                            </li>
+                            <li class="list__li">
+                                <div class="list__item list__before list__before_right">
+                                    <div class="list__text list__text_right">Заповнення фото та опису товарів на сайт інтернет-магазину (6 місяців)</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- <div class="list__item list__before list__before_right">
+                            <h3 class="subtitle__mini list__text list__text_right">досвід роботи</h3>
+                        </div>
+                        <ul class="list__ul">
+                            <li class="list__li">
+                                <div class="list__item list__before list__before_right">
+                                    <div class="list__text list__text_right list__p">Викладач графічного дизайну  онлайн в школі програмування для дітей Logika з 01.03.23 по сьогодні</div>
+                                </div>
+                            </li>
+                            <li class="list__li">
+                                <div class="list__item list__before list__before_right">
+                                    <div class="list__text list__text_right list__p">Заповнення фото та опису товарів на сайт інтернет-магазину (6 місяців)</div>
+                                </div>
+                            </li>
+                        </ul> -->
                     </div>
-                    <ul class="list__ul">
-                        <li class="list__li">
-                            <div class="list__item list__before list__before_right">
-                                <div class="list__text list__text_right list__p">Викладач графічного дизайну  онлайн в школі програмування для дітей Logika з 01.03.23 по сьогодні</div>
-                            </div>
-                        </li>
-                        <li class="list__li">
-                            <div class="list__item list__before list__before_right">
-                                <div class="list__text list__text_right list__p">Заповнення фото та опису товарів на сайт інтернет-магазину (6 місяців)</div>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
+            
         </div>
     </section>
 
-    <section class="works">
+    <section class="works" >
         <div class="container">
-            <h2 class="subtitle">Мої роботи</h2>
+            <h2 class="subtitle" id="works">Мої роботи</h2>
 
             <h3 class="subtitle__mini">Лендінги</h3>
             <div class="works__slider">
@@ -205,11 +228,15 @@
                 <div class="arr arr_right"><img src="icons/arrright.svg" alt="Стрілка вправо"></div>
             </div>
             
-            <h3 class="subtitle__mini subtitle__mini_right">Створення моделей одягу</h3>
-            <div class="works__model"><img src="img/models.jpg" alt="Моделі одягу" class="works__img"></div>
-            <p class="works__text">Потрібно більше робіт? Тоді вам сюди 
-                <a href="https://drive.google.com/drive/folders/1WSJ27c54UGkaTiE9kgMr6uhJXTrb9rW2?usp=sharing" class="click">КЛІК</a>
-            </p>
+            <h3 class="subtitle__mini subtitle__mini_right model__text">Створення моделей одягу</h3>
+            <div class="model__wrapper">
+                <div class="model__inner">
+                    <div class="works__model"><img src="img/models.jpg" alt="Моделі одягу" class="works__img"></div>
+                </div>
+                <p class="works__text">Потрібно більше робіт? Тоді вам сюди 
+                    <a href="https://drive.google.com/drive/folders/1WSJ27c54UGkaTiE9kgMr6uhJXTrb9rW2?usp=sharing" class="click">КЛІК</a>
+                </p>
+            </div>
 
             
             <h2 class="subtitle__mini">Реклама</h2>
@@ -217,9 +244,6 @@
                 <div class="advertising__container">
                     <div class="works__advertising box1">
                         <img src="img/advertising/menu.jpg" alt="Меню">
-                    </div>
-                    <div class="works__advertising box2">
-                        <img src="img/advertising/logics.jpg" alt="Логіка">
                     </div>
                     <div class="works__advertising box3">
                         <img src="img/advertising/ab.jpg" alt="Інстаграм реклама">
@@ -229,6 +253,9 @@
                     </div>
                     <div class="works__advertising box5">
                         <img src="img/advertising/business-card.jpg" alt="Реклама спортзалу">
+                    </div>
+                    <div class="works__advertising box2">
+                        <img src="img/advertising/logics.jpg" alt="Логіка">
                     </div>
                 </div>
             </div>
@@ -243,7 +270,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__item">

@@ -12,8 +12,12 @@
         font-size: 24px;
         color: #000;
         margin-right: 75px;
+        transition: all .3s;
         &:last-child {
             margin-right: 0;
+        }
+        &:hover {
+            color: #FFD500;
         }
     }
 }

@@ -10,6 +10,10 @@
     &__text {
         color: #000;
         font-size: 24px;
+        transition: all .3s;
+        &:hover {
+            color: #FFD500;
+        }
     }
 
     &__item {
