@@ -1,0 +1,28 @@
+{
+    "skills": [
+        { 
+            "name": "Adobe Photoshop", 
+            "value": 70 
+        },
+        { 
+            "name": "Adobe Illustrator", 
+            "value": 70 
+        },
+        { 
+            "name": "Webflow", 
+            "value": 55 
+        },
+        { 
+            "name": "Figma", 
+            "value": 85 
+        },
+        { 
+            "name": "Canva", 
+            "value": 80 
+        },
+        { 
+            "name": "Gimp", 
+            "value": 90 
+        }
+    ]
+}
